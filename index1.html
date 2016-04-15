@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>jQuery. Disappear</title>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+						   
+	$(".pane .delete").click(function(){
+		$(this).parents(".pane").animate({ opacity: 'hide' }, "slow");
+	});
+
+});
+</script>
+
+<style type="text/css">
+body {
+	margin: 10px auto;
+	width: 470px;
+}
+h3 {
+	margin: 0;
+	padding: 0 0 .3em;
+}
+p {
+	margin: 0;
+	padding: 0 0 .5em;
+}
+.pane {
+	background: #edf5e1;
+	padding: 10px 20px 10px;
+	position: relative;
+	border-top: solid 2px #c4df9b;
+}
+.pane .delete {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="pane">
+
+	<h3>Олдрик, Пожиратель Богов</h3>
+	<p>Один из четырех великих Лордов Пепла, которых протагонисту требуется вернуть на свои троны в Храме огня.</p>
+	<img src="http://vignette2.wikia.nocookie.net/darksouls/images/c/c6/%D0%9F%D0%BE%D0%B2%D0%B5%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C_%D0%BF%D0%B5%D0%BF%D0%BB%D0%B0_%D0%9E%D0%BB%D0%B4%D1%80%D0%B8%D0%BA%2C_%D0%BF%D0%BE%D0%B6%D0%B8%D1%80%D0%B0%D1%82%D0%B5%D0%BB%D1%8C_%D0%B1%D0%BE%D0%B3%D0%BE%D0%B2.png/revision/latest?cb=20160323083346&path-prefix=ru" width="150" height="150" alt="">
+	<img src="http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911337cross.png" alt="delete" class="delete" width="20" height="20" />
+</div>
+<div class="pane">
+	<h3>Проклятое Великое древо </h3>
+	<p>Это огромное древо проклято до основания. Является объектом поклонения жителей Поселения нежити.</p>
+	<img src="http://vignette1.wikia.nocookie.net/darksouls/images/7/7b/Curse-rotted_greatwood_trophy.png/revision/latest?cb=20160404191148&path-prefix=ru" width="150" height="150" alt="">
+	<img src="http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911337cross.png" alt="delete" class="delete" width="20" height="20" />
+</div>
+<div class="pane">
+	<h3>Танцовщица Холодной долины</h3>
+	<p>Довольно непростой босс, имеющий размашистые атаки, особенно во второй стадии, наносящие немалый урон. Лучше держаться сзади и вызвать напарника, а лучше двух.</p>
+	<img src="http://vignette1.wikia.nocookie.net/darksouls/images/6/66/9942d571cfcc73e2af866cdd44060d7d.jpg/revision/latest/scale-to-width-down/270?cb=20160406134626&path-prefix=ru" width="150" height="150" alt="">
+	<img src="http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911337cross.png" alt="delete" class="delete" width="20" height="20" />
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>jQuery. Image Replacement</title>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>');
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+
+<style type="text/css">
+body {
+	margin: 20px auto;
+	padding: 0;
+	width: 580px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+h2 {
+	font: bold 190%/100% Arial, Helvetica, sans-serif;
+	margin: 0 0 .2em;
+}
+h2 em {
+	font: normal 80%/100% Arial, Helvetica, sans-serif;
+	color: #999999;
+}
+#largeImg {
+	border: solid 1px #ccc;
+	width: 550px;
+	height: 400px;
+	padding: 5px;
+}
+.thumbs img {
+	border: solid 1px #ccc;
+	width: 100px;
+	height: 100px;
+	padding: 4px;
+}
+.thumbs img:hover {
+	border-color: #FF9900;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Illustrations</h2>
+
+<p><img id="largeImg" src="http://widewallpapers.ru/mod/games/gta/1600x900/Grand-Theft-Auto-1600x900-002.jpg" /></p>
+
+<center><p class="thumbs">
+	<a href="http://www.wallpapersxl.com/wallpapers/1600x900/battlefield-nature/143008/battlefield-nature-zombie-mode-game-and-143008.jpg" title="Image 2"><img src="http://www.wallpapersxl.com/wallpapers/1600x900/battlefield-nature/143008/battlefield-nature-zombie-mode-game-and-143008.jpg" /></a>
+	<a href="http://www.widewallpapers.ru/mod/games/mafia/1600x900/Mafia-1600x900-001.jpg" title="Image 3"><img src="http://www.widewallpapers.ru/mod/games/mafia/1600x900/Mafia-1600x900-001.jpg" /></a>
+	<a href="http://luxfon.com/pic/201206/1600x900/luxfon.com-12818.jpg" title="Image 4"><img src="http://luxfon.com/pic/201206/1600x900/luxfon.com-12818.jpg" /></a>
+</p></center></center>
+
+</body>
+</html>
